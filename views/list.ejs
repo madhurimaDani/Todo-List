@@ -1,0 +1,40 @@
+<!-- <!DOCTYPE html> -->
+<!-- <html> -->
+<!-- <head> -->
+<!--     <meta charset="UTF-8"> -->
+<!--     <title>To-do List</title> -->
+<!--     <link rel="stylesheet" href="css/styles.css"></link> -->
+<!-- </head> -->
+<!-- <body> -->
+
+<%- include("header") -%>
+    <div class="box" id = "heading">
+        <h1><%= listTitle %></h1>
+    </div>
+
+    <div class="box">
+
+        <% for(var i = 0; i < newListItem.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= newListItem[i] %></p>
+            </div>
+        <% } %>
+
+        <form class="item" action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="list" value="<%= listTitle %>">+</button>
+        </form>
+
+    </div>
+
+<%- include("footer") -%>
+
+
+
+
+<!-- </body> -->
+<!-- <footer> -->
+<!--     Copyright 2023 -->
+<!-- </footer> -->
+<!-- </html> -->
